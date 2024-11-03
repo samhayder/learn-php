@@ -1,0 +1,54 @@
+Table: books
+	. id (Primary Key) => INT 10
+	. title => VARCHAR 255
+	. author => VARCHAR 255
+	. publication_year => VARCHAR 10
+	. isbn => VARCHAR 255
+	. category_id (Foreign Key referencing Categories.category_id) => INT 11
+	. availability_status => TINYINT 1
+	. created_at => TIMESTAMP CURRENT_TIMES
+	. updated_at => TIMESTAMP NULL
+
+Table: book_loans
+	. id (Primary Key)
+	. book_id (Foreign Key referencing Books.book_id)
+	. student_id (Foreign Key referencing Students.student_id)
+	. loan_date => DATE
+	. return_date => DATE
+	. is_return => TINYINT(1)
+	. created_at => TIMESTAMP CURRENT_TIMES
+	. updated_at => TIMESTAMP NULL
+
+
+Table: categories
+	. id (Primary Key)
+	. name
+	. created_at => TIMESTAMP CURRENT_TIMES
+	. updated_at => TIMESTAMP NULL
+
+Table: students
+	. id (Primary Key)
+	. name
+	. email
+	. address	TEXT
+	. phone_number  VARCHAR => 15
+	. created_at => TIMESTAMP CURRENT_TIMES
+	. updated_at => TIMESTAMP NULL
+
+Table: subscriptions
+	. id (Primary Key)
+	. student_id (Foreign Key referencing Students.student_id)
+	. plan_id
+	. start_date => DATE
+	. end_date => DATE
+	. created_at => TIMESTAMP CURRENT_TIMES
+	. updated_at => TIMESTAMP NULL
+
+Table: subscription_plans
+	. id (Primary Key)
+	. title
+	. amount => FLOAT(10.2)
+	. duration => INT(11)
+	. status => TINYINT(1)
+	. created_at => TIMESTAMP CURRENT_TIMES
+	. updated_at => TIMESTAMP NULL

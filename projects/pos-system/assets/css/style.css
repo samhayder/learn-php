@@ -1,0 +1,73 @@
+:root {
+  --offCanvasWidth: 250px;
+  --navbarHeight: 62px;
+}
+
+body{
+  background-color: #f5f5f5;
+}
+
+/* Header nav */
+.user_img {
+  width: 30px;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+/* Left side bar */
+.left_sidebar {
+  width: var(--offCanvasWidth) !important;
+}
+
+@media  (min-width:992px) {
+  .left_sidebar {
+    top: var(--navbarHeight) !important;
+    visibility: visible !important;
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+}
+
+  .offcanvas-backdrop {
+    display: none !important;
+  }
+
+  main {
+    margin-left: var(--offCanvasWidth);
+  }
+}
+
+.sidebar_link[ aria-expanded="true"] .icon_right {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+.icon_right {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.btn-alienment {
+  height: 70px;
+  line-height: 96px;
+}
+
+/* Responsive CSS */
+
+/* Mobile Layout */
+@media (max-width: 576px) {
+  .nav-tabs .tabs_link {
+    font-size: 12px;
+    padding: 6px;
+  }
+}

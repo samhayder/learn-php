@@ -1,0 +1,10 @@
+.navbar-brand {
+	color: purple;
+	font-weight: 700;
+	letter-spacing: -2px;
+	margin-right: 50px;
+	border: 1px solid;
+	padding: 0 10px;
+	border-radius: 5px;
+	font-style: italic;
+}
