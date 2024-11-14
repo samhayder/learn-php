@@ -1,4 +1,5 @@
 <?php
+include "config.php";
 
 // Constructor
 class User
@@ -26,3 +27,12 @@ class User
 
 $userMe = new User("samhayder", "se0181133");
 $userMe->getUser();
+
+
+$db = new Query();
+
+$showData = $db->getAllData("admins", "name", "1");
+
+echo "<pre/>";
+print_r($showData);
+
