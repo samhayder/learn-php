@@ -10,12 +10,12 @@ class App
   {
     $url = $this->splitUrl();
 
-    if (file_exists("../app/controller/" . strtolower($url[0]) . ".php")) {
+    if (file_exists("../app/controllers/" . strtolower($url[0]) . ".php")) {
       $this->controller = strtolower($url[0]);
       unset($url[0]);
     }
 
-    require "../app/controller/" . $this->controller . ".php";
+    require "../app/controllers/" . $this->controller . ".php";
     $this->controller = new $this->controller;
 
     if (isset($url[1])) {
@@ -33,6 +33,7 @@ class App
   private function splitUrl()
   {
     $url = isset($_GET['url']) ? $_GET['url'] : "home";
-    return explode("/", filter_var(trim($url, "/"), FILTER_SANITIZE_URL));
+		return explode("/", filter_var(trim($url,"/"),FILTER_SANITIZE_URL));
   }
 }
+
