@@ -3,6 +3,7 @@
 class Home extends Controller {
 
   public function index() {
-    $this->view("home");
+    $data['page_title'] = "Home";
+    $this->view("index", $data);
   }
 }
