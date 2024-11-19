@@ -1,4 +1,4 @@
-<?php $this->view("components/header", $data) ?>
+<?php include "../app/views/" . THEME . "components/header.php"; ?>
 
 <section>
 	<div class="container">
@@ -224,4 +224,4 @@
 	</div>
 </section>
 
-<?php $this->view("components/footer") ?>
+<?php include "../app/views/" . THEME . "components/footer.php"; ?>

@@ -1,4 +1,4 @@
-<?php $this->view("components/header", $data) ?>
+<?php include "../app/views/" . THEME . "components/header.php"; ?>
 
 <div id="contact-page" class="container">
 	<div class="bg">
@@ -73,4 +73,4 @@
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script type="text/javascript" src="js/gmaps.js"></script>
 
-<?php $this->view("components/footer") ?>
+<?php include "../app/views/" . THEME . "components/footer.php"; ?>

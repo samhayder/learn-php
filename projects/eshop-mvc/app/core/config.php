@@ -2,6 +2,8 @@
 
 define("WEBSITE_TITLE", "eShop e-commence");
 
+define("THEME", "eshop/");
+
 
 // Database
 define("HOTS_NAME", "localhost");
